@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		37A9C8ACD5E3916D007C73C0 /* libPods-ZipCodeFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8EE1B284E8DE394DD8B851 /* libPods-ZipCodeFinder.a */; };
 		7882AE4B278E1B4A003A51AA /* ZipCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AE4A278E1B4A003A51AA /* ZipCodeList.swift */; };
+		7882AEE8278F2D05003A51AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AEE7278F2D05003A51AA /* Constants.swift */; };
+		7882AF17278F50B1003A51AA /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF16278F50B1003A51AA /* RootClass.swift */; };
+		7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF1A278F50E5003A51AA /* ZipCode.swift */; };
 		78BBBEEE278E03950052D6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEED278E03950052D6DB /* AppDelegate.swift */; };
 		78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEEF278E03950052D6DB /* SceneDelegate.swift */; };
 		78BBBEF2278E03950052D6DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEF1278E03950052D6DB /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		2B8EE1B284E8DE394DD8B851 /* libPods-ZipCodeFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZipCodeFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7882AE4A278E1B4A003A51AA /* ZipCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeList.swift; sourceTree = "<group>"; };
+		7882AEE7278F2D05003A51AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7882AF16278F50B1003A51AA /* RootClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
+		7882AF1A278F50E5003A51AA /* ZipCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCode.swift; sourceTree = "<group>"; };
 		78BBBEEA278E03950052D6DB /* ZipCodeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipCodeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BBBEED278E03950052D6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BBBEEF278E03950052D6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +56,6 @@
 				85BDD9ACCD237EEA987B98AA /* Pods-ZipCodeFinder.debug.xcconfig */,
 				79CB22E023381440E05F2505 /* Pods-ZipCodeFinder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -60,6 +65,22 @@
 				2B8EE1B284E8DE394DD8B851 /* libPods-ZipCodeFinder.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7882AF0F278F4F5D003A51AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7882AF14278F5069003A51AA /* util */ = {
+			isa = PBXGroup;
+			children = (
+				7882AF16278F50B1003A51AA /* RootClass.swift */,
+				7882AF1A278F50E5003A51AA /* ZipCode.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		78BBBEE1278E03950052D6DB = {
@@ -83,6 +104,8 @@
 		78BBBEEC278E03950052D6DB /* ZipCodeFinder */ = {
 			isa = PBXGroup;
 			children = (
+				7882AF14278F5069003A51AA /* util */,
+				7882AF0F278F4F5D003A51AA /* model */,
 				78BBBEED278E03950052D6DB /* AppDelegate.swift */,
 				78BBBEEF278E03950052D6DB /* SceneDelegate.swift */,
 				78BBBEF1278E03950052D6DB /* ViewController.swift */,
@@ -91,6 +114,7 @@
 				78BBBEF6278E03A30052D6DB /* Assets.xcassets */,
 				78BBBEF8278E03A30052D6DB /* LaunchScreen.storyboard */,
 				78BBBEFB278E03A30052D6DB /* Info.plist */,
+				7882AEE7278F2D05003A51AA /* Constants.swift */,
 			);
 			path = ZipCodeFinder;
 			sourceTree = "<group>";
@@ -195,6 +219,9 @@
 				78BBBEEE278E03950052D6DB /* AppDelegate.swift in Sources */,
 				7882AE4B278E1B4A003A51AA /* ZipCodeList.swift in Sources */,
 				78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */,
+				7882AF17278F50B1003A51AA /* RootClass.swift in Sources */,
+				7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */,
+				7882AEE8278F2D05003A51AA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

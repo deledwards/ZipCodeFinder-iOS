@@ -61,24 +61,46 @@
                                     <action selector="onFindNearbyZips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fjh-vR-Hbd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fk-Iu-jhb">
+                                <rect key="frame" x="184" y="359" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonFetch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LpP-nt-61S"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d84-MJ-mdc">
+                                <rect key="frame" x="20" y="407" width="363" height="398"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8fk-Iu-jhb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cE-vO-scr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zqG-EH-b8D" secondAttribute="trailing" constant="20" id="5NG-Jv-v4u"/>
                             <constraint firstItem="wk5-J4-48E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HKZ-3X-jMp"/>
+                            <constraint firstItem="d84-MJ-mdc" firstAttribute="top" secondItem="8fk-Iu-jhb" secondAttribute="bottom" constant="18" id="KNX-s9-oyJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d84-MJ-mdc" secondAttribute="bottom" constant="57" id="MpC-lX-Igh"/>
                             <constraint firstItem="jzZ-6v-gdu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T7m-Ez-vUb"/>
                             <constraint firstItem="zqG-EH-b8D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Tkh-ka-IkR"/>
                             <constraint firstItem="zqG-EH-b8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WOa-Iq-8U7"/>
+                            <constraint firstItem="d84-MJ-mdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wsv-Gb-MvU"/>
                             <constraint firstItem="ETK-jA-dBj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XOn-8E-lZ6"/>
                             <constraint firstItem="jzZ-6v-gdu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f9o-Zq-unb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EZR-bg-9IM" secondAttribute="trailing" constant="20" id="g8f-Jz-irS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zqG-EH-b8D" secondAttribute="trailing" constant="20" id="iGw-ON-Y1u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzZ-6v-gdu" secondAttribute="trailing" constant="20" id="m0L-pG-rov"/>
                             <constraint firstItem="EZR-bg-9IM" firstAttribute="top" secondItem="zqG-EH-b8D" secondAttribute="bottom" constant="10" id="mIX-Ab-HH8"/>
+                            <constraint firstItem="8fk-Iu-jhb" firstAttribute="top" secondItem="wk5-J4-48E" secondAttribute="bottom" constant="42" id="og7-ci-kZ2"/>
                             <constraint firstItem="jzZ-6v-gdu" firstAttribute="top" secondItem="EZR-bg-9IM" secondAttribute="bottom" constant="11" id="r4c-f5-FJV"/>
                             <constraint firstItem="jzZ-6v-gdu" firstAttribute="top" secondItem="EZR-bg-9IM" secondAttribute="bottom" constant="11" id="sSS-zj-0wI"/>
+                            <constraint firstItem="wk5-J4-48E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uK4-7u-fHN"/>
                             <constraint firstItem="ETK-jA-dBj" firstAttribute="top" secondItem="jzZ-6v-gdu" secondAttribute="bottom" constant="10" id="uUs-LU-wn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d84-MJ-mdc" secondAttribute="trailing" constant="31" id="uzz-e9-JWH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ETK-jA-dBj" secondAttribute="trailing" constant="20" id="w6z-L6-Qda"/>
                             <constraint firstItem="zqG-EH-b8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xtt-fs-RlD"/>
                             <constraint firstItem="EZR-bg-9IM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yfl-FV-ASW"/>
@@ -88,13 +110,14 @@
                     <navigationItem key="navigationItem" id="d4q-zW-o8v"/>
                     <connections>
                         <outlet property="distance" destination="ETK-jA-dBj" id="C4m-Lz-a7x"/>
+                        <outlet property="longText" destination="d84-MJ-mdc" id="J72-1v-qma"/>
                         <outlet property="zipCodeText" destination="EZR-bg-9IM" id="1V9-Sl-p0c"/>
                         <segue destination="kBX-FU-pja" kind="show" identifier="navigateToList" id="FNC-Ue-agl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="-121"/>
+            <point key="canvasLocation" x="369.56521739130437" y="-121.20535714285714"/>
         </scene>
         <!--Zip Code List-->
         <scene sceneID="7lm-F9-OE8">
@@ -127,6 +150,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
