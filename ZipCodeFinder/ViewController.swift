@@ -14,6 +14,8 @@ import Alamofire
 class ViewController: UIViewController {
     
     let queue = DispatchQueue(label: "com.response-queue", qos: .utility, attributes: [.concurrent])
+    
+    var band: Band?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonFetch(_ sender: Any) {
         
-        print("button to fetch")
+        print("button to fetch \(self.band?.name ?? "unknown")")
         getData(key: "OD4r62CydEbu3V1eb713Yy4pKCql99X0vodjQlZh5FAW9WfXC4IG4PgI4Wyjrh8J", zip: "30022", distance: "20")
     }
     

@@ -1,4 +1,7 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
+use_frameworks!
 
 target 'ZipCodeFinder' do
   pod 'Alamofire', '~> 5.5'
@@ -8,5 +11,8 @@ target 'ZipCodeFinder' do
 
   # pod 'RxAlamofire'
   # pod 'SwiftyJSON'
-  pod 'JGProgressHUD'
+  # pod 'JGProgressHUD'
+  pod 'Swinject'
+  pod 'SwinjectAutoregistration'
+  pod 'SwinjectStoryboard'
 end
