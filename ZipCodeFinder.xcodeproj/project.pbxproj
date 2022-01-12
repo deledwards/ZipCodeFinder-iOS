@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7882AE4B278E1B4A003A51AA /* ZipCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AE4A278E1B4A003A51AA /* ZipCodeList.swift */; };
 		78BBBEEE278E03950052D6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEED278E03950052D6DB /* AppDelegate.swift */; };
 		78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEEF278E03950052D6DB /* SceneDelegate.swift */; };
 		78BBBEF2278E03950052D6DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEF1278E03950052D6DB /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7882AE4A278E1B4A003A51AA /* ZipCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeList.swift; sourceTree = "<group>"; };
 		78BBBEEA278E03950052D6DB /* ZipCodeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipCodeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BBBEED278E03950052D6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BBBEEF278E03950052D6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				78BBBEEF278E03950052D6DB /* SceneDelegate.swift */,
 				78BBBEF1278E03950052D6DB /* ViewController.swift */,
 				78BBBEF3278E03950052D6DB /* Main.storyboard */,
+				7882AE4A278E1B4A003A51AA /* ZipCodeList.swift */,
 				78BBBEF6278E03A30052D6DB /* Assets.xcassets */,
 				78BBBEF8278E03A30052D6DB /* LaunchScreen.storyboard */,
 				78BBBEFB278E03A30052D6DB /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				78BBBEF2278E03950052D6DB /* ViewController.swift in Sources */,
 				78BBBEEE278E03950052D6DB /* AppDelegate.swift in Sources */,
+				7882AE4B278E1B4A003A51AA /* ZipCodeList.swift in Sources */,
 				78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

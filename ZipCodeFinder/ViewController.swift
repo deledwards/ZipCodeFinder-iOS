@@ -15,5 +15,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var distance: UITextField!
+    @IBOutlet weak var zipCodeText: UITextField!
+    @IBAction func onFindNearbyZips(_ sender: Any) {
+        
+        print("button was tapped")
+        performSegue(withIdentifier: "navigateToList", sender: nil)
+    }
 }
 

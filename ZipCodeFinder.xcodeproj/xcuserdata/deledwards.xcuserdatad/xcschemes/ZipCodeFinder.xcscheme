@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78BBBEE9278E03950052D6DB"
+               BuildableName = "ZipCodeFinder.app"
+               BlueprintName = "ZipCodeFinder"
+               ReferencedContainer = "container:ZipCodeFinder.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "78BBBEE9278E03950052D6DB"
+            BuildableName = "ZipCodeFinder.app"
+            BlueprintName = "ZipCodeFinder"
+            ReferencedContainer = "container:ZipCodeFinder.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
