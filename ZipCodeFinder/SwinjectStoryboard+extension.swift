@@ -25,9 +25,9 @@ extension SwinjectStoryboard {
             controller.zipcodeService = resolver ~> ZipCodeService.self
         
         }
+        //defaultContainer.storyboardInitCompleted(ZipCodeListController.self, initCompleted: { resolver, controller in controller.zipcodeService = resolver ~> ZipCodeService.self })
         defaultContainer.storyboardInitCompleted(ZipCodeListController.self) { resolver, controller in
             controller.zipcodeService = resolver ~> ZipCodeService.self
-            
         }
     }
 }
