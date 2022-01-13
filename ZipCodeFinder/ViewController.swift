@@ -44,6 +44,12 @@ class ViewController: UIViewController {
     
     private func getData(zip: String, distance: String) {
         
+        let child = SpinnerViewController()
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+        
         zipcodeService?.findZipCode(zip: zip, distance: distance)
             .subscribe { (event) in
                 switch event {
@@ -53,6 +59,11 @@ class ViewController: UIViewController {
                 case .success(let res):
                     print("got success")
                     print(res)
+                    DispatchQueue.main.async {
+                        child.willMove(toParent: nil)
+                        child.view.removeFromSuperview()
+                        child.removeFromParent()
+                    }
                 }
             }.disposed(by: disposeBag)
         
