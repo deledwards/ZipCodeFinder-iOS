@@ -12,7 +12,7 @@ import Alamofire
 
 
 protocol ZipCodeService {
-    func findZipCode(key: String, zip: String, distance: String) -> Observable<RestResult<Array<ZipCode>>>
+    func findZipCode(key: String, zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>>
 }
 
 struct ZipCodeServiceImpl : ZipCodeService {
@@ -20,41 +20,30 @@ struct ZipCodeServiceImpl : ZipCodeService {
     let queue = DispatchQueue(label: "com.response-queue", qos: .utility, attributes: [.concurrent])
     
     
-    func findZipCode(key: String, zip: String, distance: String) -> Observable<RestResult<Array<ZipCode>>> {
+    func findZipCode(key: String, zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>> {
         
         let url = "https://www.zipcodeapi.com/rest/\(key)/radius.json/\(zip)/\(distance)/km"
         
-        //Single<RestResult<Array<ZipCode>>>
-        
-        return Observable<RestResult<Array<ZipCode>>>.create { (observer) -> Disposable in
+        return Single<RestResult<Array<ZipCode>>>.create { single in
             
             AF.request(url)
                 .responseString(queue: queue, completionHandler: { resp in
 
-                    //var statusCode = resp.response?.statusCode
                     if let error = resp.error?.errorDescription {
-                        observer.on(.next(.failure("err: \(error)")))
-                        //observer.on(.error(error))
+                        single(.success(.failure("err: \(error)")))
                         return
                     }
                     
                     let json = JSON(resp.data as Any)
                     print(json.stringValue)
                     let foo = RootClass.init(fromJson: json)
-//                    print(foo.zipCodes[0].city as Any)
-                    
-                    observer.on(.next(.success(foo.zipCodes)))
-                    observer.on(.completed)
+                    single(.success(.success(foo.zipCodes)))
                                 
                 })
             
             return Disposables.create()
         }
-        
-       
     }
-    
-    
 }
 
 
