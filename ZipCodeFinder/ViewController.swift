@@ -32,8 +32,19 @@ class ViewController: UIViewController {
     
     @IBAction func onFindNearbyZips(_ sender: Any) {
         
-        print("button was tapped")
+        //print("button was tapped")
+        //print("performSeque")
         performSegue(withIdentifier: "navigateToList", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //print("prepare segue")
+        if(segue.identifier == "navigateToList"){
+            if let nextViewController = segue.destination as? ZipCodeListController {
+                nextViewController.zip = zipCodeText.text
+                nextViewController.distance = distance.text
+            }
+        }
     }
     
     @IBAction func buttonFetch(_ sender: Any) {
