@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZipCodeList: UITableViewController {
+class ZipCodeListController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
