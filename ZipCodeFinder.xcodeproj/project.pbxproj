@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF1A278F50E5003A51AA /* ZipCode.swift */; };
 		7882AF4E278F6FF8003A51AA /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF4D278F6FF8003A51AA /* Band.swift */; };
 		7882AF51278F707A003A51AA /* SwinjectStoryboard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF50278F707A003A51AA /* SwinjectStoryboard+extension.swift */; };
+		7882AF73278F844F003A51AA /* ZipCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF72278F844F003A51AA /* ZipCodeService.swift */; };
 		78BBBEEE278E03950052D6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEED278E03950052D6DB /* AppDelegate.swift */; };
 		78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEEF278E03950052D6DB /* SceneDelegate.swift */; };
 		78BBBEF2278E03950052D6DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBBEF1278E03950052D6DB /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		7882AF1A278F50E5003A51AA /* ZipCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCode.swift; sourceTree = "<group>"; };
 		7882AF4D278F6FF8003A51AA /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		7882AF50278F707A003A51AA /* SwinjectStoryboard+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+extension.swift"; sourceTree = "<group>"; };
+		7882AF72278F844F003A51AA /* ZipCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeService.swift; sourceTree = "<group>"; };
 		78BBBEEA278E03950052D6DB /* ZipCodeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipCodeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BBBEED278E03950052D6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BBBEEF278E03950052D6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		7882AF71278F8426003A51AA /* service */ = {
+			isa = PBXGroup;
+			children = (
+				7882AF72278F844F003A51AA /* ZipCodeService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 		78BBBEE1278E03950052D6DB = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		78BBBEEC278E03950052D6DB /* ZipCodeFinder */ = {
 			isa = PBXGroup;
 			children = (
+				7882AF71278F8426003A51AA /* service */,
 				7882AF14278F5069003A51AA /* util */,
 				7882AF0F278F4F5D003A51AA /* model */,
 				78BBBEED278E03950052D6DB /* AppDelegate.swift */,
@@ -245,6 +256,7 @@
 				7882AE4B278E1B4A003A51AA /* ZipCodeList.swift in Sources */,
 				7882AF51278F707A003A51AA /* SwinjectStoryboard+extension.swift in Sources */,
 				78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */,
+				7882AF73278F844F003A51AA /* ZipCodeService.swift in Sources */,
 				7882AF17278F50B1003A51AA /* RootClass.swift in Sources */,
 				7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */,
 				7882AEE8278F2D05003A51AA /* Constants.swift in Sources */,
