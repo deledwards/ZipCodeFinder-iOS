@@ -12,7 +12,7 @@ import Alamofire
 
 
 protocol ZipCodeService {
-    func findZipCode(key: String, zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>>
+    func findZipCode(zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>>
 }
 
 struct ZipCodeServiceImpl : ZipCodeService {
@@ -20,9 +20,9 @@ struct ZipCodeServiceImpl : ZipCodeService {
     let queue = DispatchQueue(label: "com.response-queue", qos: .utility, attributes: [.concurrent])
     
     
-    func findZipCode(key: String, zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>> {
+    func findZipCode(zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>> {
         
-        let url = "https://www.zipcodeapi.com/rest/\(key)/radius.json/\(zip)/\(distance)/km"
+        let url = "https://www.zipcodeapi.com/rest/\(apiKey)/radius.json/\(zip)/\(distance)/km"
         
         return Single<RestResult<Array<ZipCode>>>.create { single in
             
@@ -43,6 +43,21 @@ struct ZipCodeServiceImpl : ZipCodeService {
             
             return Disposables.create()
         }
+    }
+    
+    private var apiKey: String {
+      get {
+        // 1
+        guard let filePath = Bundle.main.path(forResource: "apiKey", ofType: "plist") else {
+          fatalError("Couldn't find file 'TMDB-Info.plist'.")
+        }
+        // 2
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "API_KEY") as? String else {
+          fatalError("Couldn't find key 'API_KEY' in 'TMDB-Info.plist'.")
+        }
+        return value
+      }
     }
 }
 

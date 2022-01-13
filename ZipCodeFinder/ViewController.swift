@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import SwiftyJSON
-//import JGProgressHUD
 import Alamofire
 
 class ViewController: UIViewController {
@@ -40,12 +39,12 @@ class ViewController: UIViewController {
     @IBAction func buttonFetch(_ sender: Any) {
         
         print("button to fetch \(self.band?.name ?? "unknown")")
-        getData(key: "OD4r62CydEbu3V1eb713Yy4pKCql99X0vodjQlZh5FAW9WfXC4IG4PgI4Wyjrh8J", zip: "30022", distance: "20")
+        getData(zip: "30022", distance: "20")
     }
     
-    private func getData(key: String, zip: String, distance: String) {
+    private func getData(zip: String, distance: String) {
         
-        zipcodeService?.findZipCode(key: key, zip: zip, distance: distance)
+        zipcodeService?.findZipCode(zip: zip, distance: distance)
             .subscribe { (event) in
                 switch event {
                 case .error(let error):
@@ -58,6 +57,7 @@ class ViewController: UIViewController {
             }.disposed(by: disposeBag)
         
     }
+    
 }
 
 extension Data {
