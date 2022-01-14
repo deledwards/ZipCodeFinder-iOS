@@ -5,6 +5,7 @@
 //  Created by Del Edwards on 1/11/22.
 //
 
+import Foundation
 import UIKit
 import RxSwift
 import SwiftyJSON
@@ -25,16 +26,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var distance: UITextField!
     @IBOutlet weak var zipCodeText: UITextField!
-    @IBOutlet weak var longText: UITextView!
-    
     
     @IBAction func onFindNearbyZips(_ sender: Any) {
         
-        //print("button was tapped")
-        //print("performSeque")
+
         performSegue(withIdentifier: "navigateToList", sender: nil)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,11 +48,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonFetch(_ sender: Any) {
-        
-        print("button to fetch \(self.band?.name ?? "unknown")")
-        getData(zip: "30022", distance: "20")
-    }
     
     private func getData(zip: String, distance: String) {
         
@@ -80,6 +76,12 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension String {
+    var isInt: Bool {
+        return Int(self) != nil
+    }
 }
 
 extension Data {

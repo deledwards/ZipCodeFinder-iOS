@@ -25,11 +25,11 @@ struct ZipCodeServiceImpl : ZipCodeService {
         let url = "https://www.zipcodeapi.com/rest/\(apiKey)/radius.json/\(zip)/\(distance)/km"
         
         return Single<RestResult<Array<ZipCode>>>.create { single in
-            
-            AF.request(url)
+        
+            Alamofire.request(url)
                 .responseString(queue: queue, completionHandler: { resp in
 
-                    if let error = resp.error?.errorDescription {
+                    if let error = resp.error {
                         single(.success(.failure("err: \(error)")))
                         return
                     }
