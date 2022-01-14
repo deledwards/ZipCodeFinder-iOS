@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print("prepare segue")
         if(segue.identifier == "navigateToList"){
-            if let nextViewController = segue.destination as? ZipCodeListController {
+            if let nextViewController = segue.destination as? ZipCodeListViewController {
                 nextViewController.zip = zipCodeText.text
                 nextViewController.distance = distance.text
             }

@@ -119,22 +119,38 @@
             </objects>
             <point key="canvasLocation" x="369.56521739130437" y="-121.20535714285714"/>
         </scene>
-        <!--Zip Code List Controller-->
+        <!--Zip Code List View Controller-->
         <scene sceneID="7lm-F9-OE8">
             <objects>
-                <tableViewController id="kBX-FU-pja" customClass="ZipCodeListController" customModule="ZipCodeFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ijt-ag-ohL">
+                <tableViewController id="kBX-FU-pja" customClass="ZipCodeListViewController" customModule="ZipCodeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ijt-ag-ohL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kfi-cX-ATH">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Kfi-cX-ATH" customClass="ZipCodeListCell" customModule="ZipCodeFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kfi-cX-ATH" id="wD2-QE-Bk5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85q-hB-Z8L">
+                                            <rect key="frame" x="48" y="11" width="297" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="85q-hB-Z8L" secondAttribute="trailing" constant="49" id="67e-PY-RzN"/>
+                                        <constraint firstItem="85q-hB-Z8L" firstAttribute="leading" secondItem="wD2-QE-Bk5" secondAttribute="leadingMargin" constant="28" id="MK4-7U-oh7"/>
+                                        <constraint firstItem="85q-hB-Z8L" firstAttribute="top" secondItem="wD2-QE-Bk5" secondAttribute="topMargin" id="iX4-UG-zDE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="zipLabel" destination="85q-hB-Z8L" id="N7n-iD-xPe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -146,7 +162,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BV3-G3-GGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-121"/>
+            <point key="canvasLocation" x="1371.0144927536232" y="-426.5625"/>
         </scene>
     </scenes>
     <resources>
