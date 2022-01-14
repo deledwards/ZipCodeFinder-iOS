@@ -19,9 +19,11 @@ class ZipCodeListController: UITableViewController {
     
     var zipcodeService: ZipCodeService?
 
+    private var zipcodeList: [ZipCode]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         print("zip : \(zip ?? "not set")")
         print("distance : \(distance ?? "not set")")
 
@@ -34,7 +36,103 @@ class ZipCodeListController: UITableViewController {
             print("do nothing")
             return
         }
-        getData(zip: unZip, distance: unDist)
+        //getData(zip: unZip, distance: unDist)
+
+        zipcodeList = prepareData()
+
+        print(zipcodeList as AnyObject)
+    }
+
+    private func prepareData() -> [ZipCode]! {
+        let jsonStr = """
+                      {
+                          "zip_codes": [
+                              {
+                                  "zip_code": "30092",
+                                  "distance": 6.427,
+                                  "city": "Norcross",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30026",
+                                  "distance": 8.931,
+                                  "city": "North Metro",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30029",
+                                  "distance": 8.931,
+                                  "city": "North Metro",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30095",
+                                  "distance": 8.931,
+                                  "city": "Duluth",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30098",
+                                  "distance": 8.931,
+                                  "city": "Duluth",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30099",
+                                  "distance": 8.931,
+                                  "city": "Duluth",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30097",
+                                  "distance": 8.67,
+                                  "city": "Duluth",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30076",
+                                  "distance": 6.602,
+                                  "city": "Roswell",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30022",
+                                  "distance": 0,
+                                  "city": "Alpharetta",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30023",
+                                  "distance": 4.366,
+                                  "city": "Alpharetta",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30009",
+                                  "distance": 8.134,
+                                  "city": "Alpharetta",
+                                  "state": "GA"
+                              },
+                              {
+                                  "zip_code": "30005",
+                                  "distance": 6.896,
+                                  "city": "Alpharetta",
+                                  "state": "GA"
+                              }
+                          ]
+                      }
+                      """
+
+
+        if let dataFromString = jsonStr.data(using: .utf8, allowLossyConversion: false) {
+            let json = try! JSON(data: dataFromString)
+
+            let foo = RootClass.init(fromJson: json)
+            return foo.zipCodes
+        }else {
+            return []
+        }
+
     }
     
     private func getData(zip: String, distance: String) {
@@ -73,7 +171,7 @@ class ZipCodeListController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return zipcodeList?.count ?? 0
     }
 
     /*

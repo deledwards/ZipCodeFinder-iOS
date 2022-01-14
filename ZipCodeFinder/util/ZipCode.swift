@@ -13,6 +13,9 @@ class ZipCode : NSObject, NSCoding{
     var state : String!
     var zipCode : String!
 
+    override var description: String {
+        "ZipCode( city: '\(city.description)', state: '\(state.description)', zip: '\(zipCode.description)', distance: '\(distance.description)')"
+    }
 
     /**
      * Instantiate the instance using the passed json values to set the properties values

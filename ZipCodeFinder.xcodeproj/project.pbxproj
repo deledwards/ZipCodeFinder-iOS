@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EE3AA40246B470E5F940529 /* ZipCodeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */; };
 		7882AE4B278E1B4A003A51AA /* ZipCodeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AE4A278E1B4A003A51AA /* ZipCodeListController.swift */; };
 		7882AEE8278F2D05003A51AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AEE7278F2D05003A51AA /* Constants.swift */; };
 		7882AF17278F50B1003A51AA /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF16278F50B1003A51AA /* RootClass.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		46548FC204D417B13C90A17D /* Pods-ZipCodeFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeListCell.swift; sourceTree = "<group>"; };
 		7882AE4A278E1B4A003A51AA /* ZipCodeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeListController.swift; sourceTree = "<group>"; };
 		7882AEE7278F2D05003A51AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7882AF16278F50B1003A51AA /* RootClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				78BBBEFB278E03A30052D6DB /* Info.plist */,
 				7882AEE7278F2D05003A51AA /* Constants.swift */,
 				7882AF50278F707A003A51AA /* SwinjectStoryboard+extension.swift */,
+				4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */,
 			);
 			path = ZipCodeFinder;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				7882AF17278F50B1003A51AA /* RootClass.swift in Sources */,
 				7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */,
 				7882AEE8278F2D05003A51AA /* Constants.swift in Sources */,
+				4EE3AA40246B470E5F940529 /* ZipCodeListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
