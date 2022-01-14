@@ -5,18 +5,8 @@
 import UIKit
 
 class ZipCodeListCell: UITableViewCell {
-    //typealias DoneButtonAction = () -> Void
-
-
-    @IBOutlet var zipLabel: UILabel!
-    //    @IBOutlet var cityLabel: UILabel!
-//    @IBOutlet var stateLabel: UILabel!
-//    @IBOutlet var zipLabel: UILabel!
-//    @IBOutlet var distanceLabel: UILabel!
-
-    //var doneButtonAction: DoneButtonAction?
-
-//    @IBAction func doneButtonTriggered(_ sender: UIButton) {
-//        doneButtonAction?()
-//    }
+    @IBOutlet weak var labelCity: UILabel!
+    @IBOutlet weak var labelDistance: UILabel!
+    @IBOutlet weak var labelZip: UILabel!
+    @IBOutlet weak var labelState: UILabel!
 }
