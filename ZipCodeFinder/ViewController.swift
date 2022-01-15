@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 import Alamofire
-//import SwiftValidator
+import SwiftValidator
 
 class ViewController: UIViewController {
     
@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var distance: UITextField!
     @IBOutlet weak var zipCodeText: UITextField!
+    @IBOutlet weak var labelZipError: UILabel!
+    @IBOutlet weak var labelDistanceError: UILabel!
     
     @IBAction func onFindNearbyZips(_ sender: Any) {
         

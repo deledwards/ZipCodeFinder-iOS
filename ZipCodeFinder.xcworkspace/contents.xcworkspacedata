@@ -5,6 +5,9 @@
       location = "group:ZipCodeFinder.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../SwiftValidator/Validator.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
