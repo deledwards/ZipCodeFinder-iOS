@@ -14,15 +14,34 @@ import SwiftValidator
 
 class ViewController: UIViewController {
     
+    
     var band: Band?
     var zipcodeService: ZipCodeService?
     
     let disposeBag = DisposeBag()
+    
+    let validator = Validator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        setupValidator()
+        
+
     }
+    
+//    func validationSuccessful() {
+//        print("Validation Success!")
+//        let alert = UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertController.Style.alert)
+//        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        alert.addAction(defaultAction)
+//        self.present(alert, animated: true, completion: nil)
+//
+//    }
+//    func validationFailed(_ errors:[(Validatable, ValidationError)]) {
+//        print("Validation FAILED!")
+//    }
 
 
     @IBOutlet weak var labelError: UILabel!
@@ -30,11 +49,56 @@ class ViewController: UIViewController {
     @IBOutlet weak var zipCodeText: UITextField!
     @IBOutlet weak var labelZipError: UILabel!
     @IBOutlet weak var labelDistanceError: UILabel!
-    
+
+    private func setupValidator() {
+        validator.styleTransformers(success:{ (validationRule) -> Void in
+            print("here")
+            // clear error label
+            validationRule.errorLabel?.isHidden = true
+            validationRule.errorLabel?.text = ""
+
+            if let textField = validationRule.field as? UITextField {
+                textField.layer.borderColor = UIColor.green.cgColor
+                textField.layer.borderWidth = 0.5
+            } else if let textField = validationRule.field as? UITextView {
+                textField.layer.borderColor = UIColor.green.cgColor
+                textField.layer.borderWidth = 0.5
+            }
+        }, error:{ (validationError) -> Void in
+            print("error")
+            validationError.errorLabel?.isHidden = false
+            validationError.errorLabel?.text = validationError.errorMessage
+            if let textField = validationError.field as? UITextField {
+                textField.layer.borderColor = UIColor.red.cgColor
+                textField.layer.borderWidth = 1.0
+            } else if let textField = validationError.field as? UITextView {
+                textField.layer.borderColor = UIColor.red.cgColor
+                textField.layer.borderWidth = 1.0
+            }
+        })
+
+
+
+        validator.registerField(zipCodeText, errorLabel: labelZipError,
+                rules: [RequiredRule(),
+                        MinLengthRule(length: 5, message: "5 digit zip only"),
+                        MaxLengthRule(length: 5, message: "5 digit zip only"),
+                        NumericTextRule()
+                ])
+    }
+
     @IBAction func onFindNearbyZips(_ sender: Any) {
         
+        validator.validate {(errors:[(Validatable, ValidationError)]) in
+            
+            if errors.count > 0 {
+                print("validation failed")
+            }else {
+                print("Validation Success!")
+            }
+        }
 
-        performSegue(withIdentifier: "navigateToList", sender: nil)
+        //performSegue(withIdentifier: "navigateToList", sender: nil)
         
         
     }
