@@ -85,6 +85,8 @@ class ViewController: UIViewController {
                         MaxLengthRule(length: 5, message: "5 digit zip only"),
                         NumericTextRule()
                 ])
+        validator.registerField(distance, errorLabel: labelDistanceError,
+                rules: [RequiredRule(), NumericTextRule(), TextIntegerMinAndMaxRule(min: 1, max: 500)])
     }
 
     @IBAction func onFindNearbyZips(_ sender: Any) {

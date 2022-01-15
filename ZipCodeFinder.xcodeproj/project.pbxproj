@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EE3A328223B1B042FA28232 /* MockZipCodeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3AF377145ABF833371A8D /* MockZipCodeServiceImpl.swift */; };
+		4EE3A688F9A6245744827841 /* NumericTextRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3A40F4B2694FCA73F71AE /* NumericTextRule.swift */; };
 		4EE3AA40246B470E5F940529 /* ZipCodeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */; };
 		5F2C772C0475E2079F1880BE /* Pods_ZipCodeFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FBA223C09309C9C5CE4523 /* Pods_ZipCodeFinder.framework */; };
 		7882AE4B278E1B4A003A51AA /* ZipCodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AE4A278E1B4A003A51AA /* ZipCodeListViewController.swift */; };
@@ -24,13 +25,14 @@
 		78BBBEF5278E03950052D6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BBBEF3278E03950052D6DB /* Main.storyboard */; };
 		78BBBEF7278E03A30052D6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BBBEF6278E03A30052D6DB /* Assets.xcassets */; };
 		78BBBEFA278E03A30052D6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BBBEF8278E03A30052D6DB /* LaunchScreen.storyboard */; };
-		78DBABF127933A8E00444FFF /* NumericTextRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBABF027933A8E00444FFF /* NumericTextRule.swift */; };
+		78DBABF62793427100444FFF /* TextIntegerMinAndMaxRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBABF52793427100444FFF /* TextIntegerMinAndMaxRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CB7AABCCF2B9ABCFDB4EFE9 /* Pods-ZipCodeFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		32FBA223C09309C9C5CE4523 /* Pods_ZipCodeFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipCodeFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeListCell.swift; sourceTree = "<group>"; };
+		4EE3A40F4B2694FCA73F71AE /* NumericTextRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericTextRule.swift; sourceTree = "<group>"; };
 		4EE3AF377145ABF833371A8D /* MockZipCodeServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockZipCodeServiceImpl.swift; sourceTree = "<group>"; };
 		7882AE4A278E1B4A003A51AA /* ZipCodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeListViewController.swift; sourceTree = "<group>"; };
 		7882AEE7278F2D05003A51AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		78BBBEF6278E03A30052D6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78BBBEF9278E03A30052D6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78BBBEFB278E03A30052D6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78DBABF027933A8E00444FFF /* NumericTextRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextRule.swift; sourceTree = "<group>"; };
+		78DBABF52793427100444FFF /* TextIntegerMinAndMaxRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextIntegerMinAndMaxRule.swift; sourceTree = "<group>"; };
 		A2803371310253ED93FAF4F6 /* Pods-ZipCodeFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.release.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4EE3A3C39A71C166C7D5ABE0 /* rules */ = {
+			isa = PBXGroup;
+			children = (
+				4EE3A40F4B2694FCA73F71AE /* NumericTextRule.swift */,
+				78DBABF52793427100444FFF /* TextIntegerMinAndMaxRule.swift */,
+			);
+			path = rules;
+			sourceTree = "<group>";
+		};
 		7882AF0F278F4F5D003A51AA /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +97,7 @@
 			children = (
 				7882AF16278F50B1003A51AA /* RootClass.swift */,
 				7882AF1A278F50E5003A51AA /* ZipCode.swift */,
+				4EE3A3C39A71C166C7D5ABE0 /* rules */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -135,7 +147,6 @@
 				7882AEE7278F2D05003A51AA /* Constants.swift */,
 				7882AF50278F707A003A51AA /* SwinjectStoryboard+extension.swift */,
 				4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */,
-				78DBABF027933A8E00444FFF /* NumericTextRule.swift */,
 			);
 			path = ZipCodeFinder;
 			sourceTree = "<group>";
@@ -269,13 +280,14 @@
 				7882AE4B278E1B4A003A51AA /* ZipCodeListViewController.swift in Sources */,
 				7882AF51278F707A003A51AA /* SwinjectStoryboard+extension.swift in Sources */,
 				78BBBEF0278E03950052D6DB /* SceneDelegate.swift in Sources */,
-				78DBABF127933A8E00444FFF /* NumericTextRule.swift in Sources */,
 				7882AF73278F844F003A51AA /* ZipCodeService.swift in Sources */,
 				7882AF17278F50B1003A51AA /* RootClass.swift in Sources */,
 				7882AF1B278F50E5003A51AA /* ZipCode.swift in Sources */,
+				78DBABF62793427100444FFF /* TextIntegerMinAndMaxRule.swift in Sources */,
 				7882AEE8278F2D05003A51AA /* Constants.swift in Sources */,
 				4EE3AA40246B470E5F940529 /* ZipCodeListCell.swift in Sources */,
 				4EE3A328223B1B042FA28232 /* MockZipCodeServiceImpl.swift in Sources */,
+				4EE3A688F9A6245744827841 /* NumericTextRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
