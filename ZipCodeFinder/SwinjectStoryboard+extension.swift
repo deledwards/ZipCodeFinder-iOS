@@ -16,8 +16,11 @@ extension SwinjectStoryboard {
         defaultContainer.autoregister(Band.self) { _ in
             MetalBand(name: "Black Sabbath")
         }
+//        defaultContainer.autoregister(ZipCodeService.self) { _ in
+//            MockZipCodeServiceImpl()
+//        }
         defaultContainer.autoregister(ZipCodeService.self) { _ in
-            MockZipCodeServiceImpl()
+            ZipCodeServiceImpl()
         }
         defaultContainer.storyboardInitCompleted(ViewController.self) { resolver, controller in
             

@@ -30,7 +30,8 @@ class ZipCodeListViewController: UITableViewController {
         zipcodeList = [] //prepareData()
 
 
-        getData(zip: "30075", distance: "60")
+        //add guards
+        getData(zip: zip!, distance: distance!)
     }
 
     private func getData(zip: String, distance: String) {

@@ -30,19 +30,6 @@ class ViewController: UIViewController {
         
 
     }
-    
-//    func validationSuccessful() {
-//        print("Validation Success!")
-//        let alert = UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertController.Style.alert)
-//        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alert.addAction(defaultAction)
-//        self.present(alert, animated: true, completion: nil)
-//
-//    }
-//    func validationFailed(_ errors:[(Validatable, ValidationError)]) {
-//        print("Validation FAILED!")
-//    }
-
 
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var distance: UITextField!
@@ -97,11 +84,9 @@ class ViewController: UIViewController {
                 print("validation failed")
             }else {
                 print("Validation Success!")
+                performSegue(withIdentifier: "navigateToList", sender: nil)
             }
         }
-
-        //performSegue(withIdentifier: "navigateToList", sender: nil)
-        
         
     }
     
