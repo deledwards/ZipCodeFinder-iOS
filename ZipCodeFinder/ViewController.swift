@@ -10,10 +10,9 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 import Alamofire
+//import SwiftValidator
 
 class ViewController: UIViewController {
-    
-    let queue = DispatchQueue(label: "com.response-queue", qos: .utility, attributes: [.concurrent])
     
     var band: Band?
     var zipcodeService: ZipCodeService?
@@ -92,11 +91,11 @@ extension Data {
 
 
 class SpinnerViewController: UIViewController {
-    var spinner = UIActivityIndicatorView(style: .whiteLarge)
+    var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
     override func loadView() {
         view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        view.backgroundColor = UIColor(white: 0, alpha: 0.3)
 
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.startAnimating()

@@ -43,9 +43,6 @@ class ZipCodeListViewController: UITableViewController {
 
         zipcodeService?.findZipCode(zip: zip, distance: distance)
                 .subscribe { (event) in
-                    do {
-                        sleep(10)
-                    }
                     switch event {
                     case .error(let error):
                         print("got error")
@@ -69,37 +66,6 @@ class ZipCodeListViewController: UITableViewController {
                     }
                 }.disposed(by: disposeBag)
 
-    }
-
-    private func prepareData() -> [ZipCode]! {
-        let jsonStr = """
-                      {
-                          "zip_codes": [
-                              {
-                                  "zip_code": "30092",
-                                  "distance": 6.427,
-                                  "city": "Norcross",
-                                  "state": "GA"
-                              },
-                              {
-                                  "zip_code": "30026",
-                                  "distance": 8.931,
-                                  "city": "North Metro",
-                                  "state": "GA"
-                              }
-                          ]
-                      }
-                      """
-
-
-        if let dataFromString = jsonStr.data(using: .utf8, allowLossyConversion: false) {
-            let json = try! JSON(data: dataFromString)
-
-            let foo = RootClass.init(fromJson: json)
-            return foo.zipCodes
-        } else {
-            return []
-        }
     }
 
 }

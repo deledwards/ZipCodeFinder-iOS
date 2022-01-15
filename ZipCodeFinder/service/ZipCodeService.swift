@@ -21,7 +21,7 @@ struct ZipCodeServiceImpl : ZipCodeService {
     
     
     func findZipCode(zip: String, distance: String) -> Single<RestResult<Array<ZipCode>>> {
-        
+        print("in real service")
         let url = "https://www.zipcodeapi.com/rest/\(apiKey)/radius.json/\(zip)/\(distance)/km"
         
         return Single<RestResult<Array<ZipCode>>>.create { single in
