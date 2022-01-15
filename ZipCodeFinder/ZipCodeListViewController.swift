@@ -73,7 +73,9 @@ class ZipCodeListViewController: UITableViewController {
                             
                             if errHappened {
                                 let alert = UIAlertController(title: "Error", message: errMessage, preferredStyle: UIAlertController.Style.alert)
-                                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+                                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: {(alert) in
+                                    self.navigationController?.popViewController(animated: true)
+                                }))
                                 self.present(alert, animated: true, completion: nil)
                             }
                         }
