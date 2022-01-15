@@ -15,6 +15,8 @@ import SwiftyBeaver
 
 class ViewController: UIViewController {
     
+    static var statCtx = String(reflecting: self)
+    let instCtx = String(reflecting: self)
     
     var band: Band?
     var zipcodeService: ZipCodeService?
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
         setupValidator()
         
 
@@ -39,6 +41,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelDistanceError: UILabel!
 
     private func setupValidator() {
+        labelZipError.text = ""
+        labelDistanceError.text = ""
+        
         validator.styleTransformers(success:{ (validationRule) -> Void in
             // clear error label
             validationRule.errorLabel?.isHidden = true
@@ -52,7 +57,7 @@ class ViewController: UIViewController {
                 textField.layer.borderWidth = 0.5
             }
         }, error:{ (validationError) -> Void in
-            log.error(self, "error in setup validator")
+            log.error(self.instCtx, "error in setup validator")
             validationError.errorLabel?.isHidden = false
             validationError.errorLabel?.text = validationError.errorMessage
             if let textField = validationError.field as? UITextField {
@@ -81,9 +86,9 @@ class ViewController: UIViewController {
         validator.validate {(errors:[(Validatable, ValidationError)]) in
             
             if errors.count > 0 {
-                log.debug(self, "Validation failed")
+                log.debug(instCtx, "Validation failed")
             }else {
-                log.debug(self, "Validation Success!")
+                log.debug(instCtx, "Validation Success!")
                 performSegue(withIdentifier: "navigateToList", sender: nil)
             }
         }
@@ -112,9 +117,9 @@ class ViewController: UIViewController {
             .subscribe { (event) in
                 switch event {
                 case .error(let error):
-                    log.error(self, "got error \(error)")
+                    log.error(self.instCtx, "got error \(error)")
                 case .success(let res):
-                    log.debug(self,"findZipCode Result : \(res)")
+                    log.debug(self.instCtx,"findZipCode Result : \(res)")
                     DispatchQueue.main.async {
                         child.willMove(toParent: nil)
                         child.view.removeFromSuperview()
