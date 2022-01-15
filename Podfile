@@ -11,6 +11,7 @@ target 'ZipCodeFinder' do
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
   pod 'SwinjectStoryboard'
+  # pod 'SwiftyBeaver'
 
   # pod 'SwiftValidator'
 

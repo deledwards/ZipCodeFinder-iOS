@@ -28,8 +28,6 @@ class ZipCodeListViewController: UITableViewController {
         print("distance : \(distance ?? "not set")")
 
         zipcodeList = [] //prepareData()
-
-
         //add guards
         getData(zip: zip!, distance: distance!)
     }
