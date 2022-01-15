@@ -44,10 +44,14 @@ class ZipCodeListViewController: UITableViewController {
 
         zipcodeService?.findZipCode(zip: zip, distance: distance)
                 .subscribe { (event) in
+                    var errHappened = false
+                    var errMessage = ""
                     switch event {
                     case .error(let error):
                         print("got error")
                         print(error)
+                        errHappened = true
+                        errMessage = error.localizedDescription
                     case .success(let res):
                         print("got success")
                         switch res {
@@ -56,6 +60,9 @@ class ZipCodeListViewController: UITableViewController {
                             self.zipcodeList = arr
                         case .failure(let err):
                             print(err)
+                            // put an error dialog here
+                            errHappened = true
+                            errMessage = err
                         }
                         DispatchQueue.main.async {
                             child.willMove(toParent: nil)
@@ -63,6 +70,12 @@ class ZipCodeListViewController: UITableViewController {
                             child.removeFromParent()
 
                             self.tableView.reloadData()
+                            
+                            if errHappened {
+                                let alert = UIAlertController(title: "Error", message: errMessage, preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            }
                         }
                     }
                 }.disposed(by: disposeBag)

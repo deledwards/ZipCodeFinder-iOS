@@ -34,11 +34,34 @@ struct ZipCodeServiceImpl : ZipCodeService {
                         return
                     }
                     
-                    let json = JSON(resp.data as Any)
-                    print(json.stringValue)
-                    let foo = RootClass.init(fromJson: json)
-                    single(.success(.success(foo.zipCodes)))
+                    switch resp.result {
+                    case .failure(let err):
+                        print(err)
+                        single(.success(.failure(err.localizedDescription)))
+                    case .success(let succ):
+                        //print(succ)
+                        
+                        let json = JSON.init(parseJSON: succ)
+                        
+                        if json["error_code"].exists() {
+                            single(.success(.failure(json.stringValue)))
+                            
+                        } else if json["zip_codes"].exists() {
+                            if json["zip_codes"].count > 0 {
+                                let parsedJsonObj = RootClass.init(fromJson: json)
                                 
+                                let withoutSource =  parsedJsonObj.zipCodes.filter { barbaz in
+                                    barbaz.zipCode != zip
+                                }
+                                
+                                if withoutSource.count < 1 {
+                                    single(.success(.failure("No results")))
+                                } else {
+                                    single(.success(.success(withoutSource)))
+                                }
+                            }
+                        }
+                    }
                 })
             
             return Disposables.create()
