@@ -5,6 +5,9 @@
       location = "group:ZipCodeFinder.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../SwiftyBeaver/SwiftyBeaver.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../SwiftValidator/Validator.xcodeproj">
    </FileRef>
    <FileRef

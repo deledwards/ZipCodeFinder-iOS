@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 import Alamofire
+import SwiftyBeaver
 
 class ZipCodeListViewController: UITableViewController {
 
@@ -24,8 +25,8 @@ class ZipCodeListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("zip : \(zip ?? "not set")")
-        print("distance : \(distance ?? "not set")")
+        log.debug(self,"zip : \(zip ?? "not set")")
+        log.debug(self, "distance : \(distance ?? "not set")")
 
         zipcodeList = [] //prepareData()
         //add guards
@@ -46,18 +47,18 @@ class ZipCodeListViewController: UITableViewController {
                     var errMessage = ""
                     switch event {
                     case .error(let error):
-                        print("got error")
-                        print(error)
+                        log.error(self, "got error in zipcode service sub")
+                        log.error(self, "err: \(error)")
                         errHappened = true
                         errMessage = error.localizedDescription
                     case .success(let res):
-                        print("got success")
+                        log.debug(self, "got success")
                         switch res {
                         case .success(let arr):
-                            print(arr)
+                            log.debug(self, " zip code result list : \(arr)")
                             self.zipcodeList = arr
                         case .failure(let err):
-                            print(err)
+                            log.error(self, "err: \(err)")
                             // put an error dialog here
                             errHappened = true
                             errMessage = err
