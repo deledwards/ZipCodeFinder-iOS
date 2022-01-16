@@ -5,6 +5,9 @@ PODS:
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxTest (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - SwiftyJSON (4.2.0)
   - Swinject (2.6.0)
   - SwinjectAutoregistration (2.5.1):
@@ -16,6 +19,7 @@ DEPENDENCIES:
   - Alamofire
   - RxCocoa
   - RxSwift
+  - RxTest
   - SwiftyJSON
   - Swinject
   - SwinjectAutoregistration
@@ -27,6 +31,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - RxTest
     - SwiftyJSON
     - Swinject
     - SwinjectAutoregistration
@@ -37,11 +42,12 @@ SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectAutoregistration: f72bf894cbd2ee4a9153e00fa5208e93fb44d283
   SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: d16b9e34d6ce54299f5285fd729a0bb2a0340299
+PODFILE CHECKSUM: 0b5f715c922f46eaf009dce156a073921dc07696
 
 COCOAPODS: 1.11.2

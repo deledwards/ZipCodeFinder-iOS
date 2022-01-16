@@ -14,6 +14,7 @@ target 'ZipCodeFinder' do
   # pod 'SwiftyBeaver'
 
   # pod 'SwiftValidator'
+  # pod 'SwiftLint'
 
   post_install do |installer|
    installer.pods_project.targets.each do |target|
@@ -21,5 +22,13 @@ target 'ZipCodeFinder' do
      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
     end
    end
+  end
+
+  target 'ZipCodeFinderTests' do
+    inherit! :search_paths
+
+    pod 'RxTest'
+
+    
   end
 end
