@@ -13,14 +13,14 @@ import RxCocoa
 
 class ZipCodeFinderTests: XCTestCase {
     
-    private let container = Container()
+//    private let container = Container()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        container.autoregister(ZipCodeService.self) { _ in
-           MockZipCodeServiceImpl()
-       }
+//        container.autoregister(ZipCodeService.self) { _ in
+//           MockZipCodeServiceImpl()
+//       }
     }
 
     override func tearDownWithError() throws {

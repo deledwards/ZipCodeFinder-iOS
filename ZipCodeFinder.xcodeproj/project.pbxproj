@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CE842A4C45BBFF0A3455FC3 /* Pods_ZipCodeFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB869D612C1D274F28043092 /* Pods_ZipCodeFinderTests.framework */; };
 		4EE3A328223B1B042FA28232 /* MockZipCodeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3AF377145ABF833371A8D /* MockZipCodeServiceImpl.swift */; };
 		4EE3A688F9A6245744827841 /* NumericTextRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3A40F4B2694FCA73F71AE /* NumericTextRule.swift */; };
 		4EE3AA40246B470E5F940529 /* ZipCodeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */; };
-		5F2C772C0475E2079F1880BE /* Pods_ZipCodeFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FBA223C09309C9C5CE4523 /* Pods_ZipCodeFinder.framework */; };
 		7882AE4B278E1B4A003A51AA /* ZipCodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AE4A278E1B4A003A51AA /* ZipCodeListViewController.swift */; };
 		7882AEE8278F2D05003A51AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AEE7278F2D05003A51AA /* Constants.swift */; };
 		7882AF17278F50B1003A51AA /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7882AF16278F50B1003A51AA /* RootClass.swift */; };
@@ -28,6 +26,8 @@
 		78BBBEFA278E03A30052D6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BBBEF8278E03A30052D6DB /* LaunchScreen.storyboard */; };
 		78DBABF62793427100444FFF /* TextIntegerMinAndMaxRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBABF52793427100444FFF /* TextIntegerMinAndMaxRule.swift */; };
 		78DBAC402793813700444FFF /* ZipCodeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBAC3F2793813700444FFF /* ZipCodeFinderTests.swift */; };
+		87F4763E6DED18A5C1D4B153 /* Pods_ZipCodeFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38797E0B8D5094B3F31C60DA /* Pods_ZipCodeFinderTests.framework */; };
+		AFB3E5C8613F46E282AE6C32 /* Pods_ZipCodeFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D263F3D19F6DF601B6C00 /* Pods_ZipCodeFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CB7AABCCF2B9ABCFDB4EFE9 /* Pods-ZipCodeFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.debug.xcconfig"; sourceTree = "<group>"; };
-		32FBA223C09309C9C5CE4523 /* Pods_ZipCodeFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipCodeFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		181A39EAB5E878FD197019AF /* Pods-ZipCodeFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		38797E0B8D5094B3F31C60DA /* Pods_ZipCodeFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipCodeFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7DDE61E417BB0A39CBD610 /* Pods-ZipCodeFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.release.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.release.xcconfig"; sourceTree = "<group>"; };
 		4EE3A2BBCEDDA74B653C1A54 /* ZipCodeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeListCell.swift; sourceTree = "<group>"; };
 		4EE3A40F4B2694FCA73F71AE /* NumericTextRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericTextRule.swift; sourceTree = "<group>"; };
 		4EE3AF377145ABF833371A8D /* MockZipCodeServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockZipCodeServiceImpl.swift; sourceTree = "<group>"; };
-		535B8DAB3E809490C2420B7D /* Pods-ZipCodeFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinderTests.release.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		7882AE4A278E1B4A003A51AA /* ZipCodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeListViewController.swift; sourceTree = "<group>"; };
 		7882AEE7278F2D05003A51AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7882AF16278F50B1003A51AA /* RootClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 		78DBAC3D2793813600444FFF /* ZipCodeFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipCodeFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DBAC3F2793813700444FFF /* ZipCodeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeFinderTests.swift; sourceTree = "<group>"; };
 		78DBAC412793813700444FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98003C6D9A79B9015A7610AF /* Pods-ZipCodeFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2803371310253ED93FAF4F6 /* Pods-ZipCodeFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinder.release.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder.release.xcconfig"; sourceTree = "<group>"; };
-		BB869D612C1D274F28043092 /* Pods_ZipCodeFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipCodeFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB451C00F2FAF3861DECA2F /* Pods-ZipCodeFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC2968AF2AD2BDA076B9D8C6 /* Pods-ZipCodeFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipCodeFinderTests.release.xcconfig"; path = "Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF3D263F3D19F6DF601B6C00 /* Pods_ZipCodeFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipCodeFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F2C772C0475E2079F1880BE /* Pods_ZipCodeFinder.framework in Frameworks */,
+				AFB3E5C8613F46E282AE6C32 /* Pods_ZipCodeFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE842A4C45BBFF0A3455FC3 /* Pods_ZipCodeFinderTests.framework in Frameworks */,
+				87F4763E6DED18A5C1D4B153 /* Pods_ZipCodeFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,10 +95,10 @@
 		166431ECB5A0818183817565 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0CB7AABCCF2B9ABCFDB4EFE9 /* Pods-ZipCodeFinder.debug.xcconfig */,
-				A2803371310253ED93FAF4F6 /* Pods-ZipCodeFinder.release.xcconfig */,
-				98003C6D9A79B9015A7610AF /* Pods-ZipCodeFinderTests.debug.xcconfig */,
-				535B8DAB3E809490C2420B7D /* Pods-ZipCodeFinderTests.release.xcconfig */,
+				181A39EAB5E878FD197019AF /* Pods-ZipCodeFinder.debug.xcconfig */,
+				4C7DDE61E417BB0A39CBD610 /* Pods-ZipCodeFinder.release.xcconfig */,
+				CBB451C00F2FAF3861DECA2F /* Pods-ZipCodeFinderTests.debug.xcconfig */,
+				CC2968AF2AD2BDA076B9D8C6 /* Pods-ZipCodeFinderTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -110,6 +110,15 @@
 				78DBABF52793427100444FFF /* TextIntegerMinAndMaxRule.swift */,
 			);
 			path = rules;
+			sourceTree = "<group>";
+		};
+		6F29B28540727FC1E0E4668E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D263F3D19F6DF601B6C00 /* Pods_ZipCodeFinder.framework */,
+				38797E0B8D5094B3F31C60DA /* Pods_ZipCodeFinderTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7882AF0F278F4F5D003A51AA /* model */ = {
@@ -146,7 +155,7 @@
 				78DBAC3E2793813700444FFF /* ZipCodeFinderTests */,
 				78BBBEEB278E03950052D6DB /* Products */,
 				166431ECB5A0818183817565 /* Pods */,
-				D175181F27166510146BCF44 /* Frameworks */,
+				6F29B28540727FC1E0E4668E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,15 +207,6 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
-		D175181F27166510146BCF44 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				32FBA223C09309C9C5CE4523 /* Pods_ZipCodeFinder.framework */,
-				BB869D612C1D274F28043092 /* Pods_ZipCodeFinderTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,12 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78BBBEFE278E03A30052D6DB /* Build configuration list for PBXNativeTarget "ZipCodeFinder" */;
 			buildPhases = (
-				B4A26DF109624315604EB2A0 /* [CP] Check Pods Manifest.lock */,
+				08A69F566921649FF8D4495F /* [CP] Check Pods Manifest.lock */,
 				78BBBEE6278E03950052D6DB /* Sources */,
 				78BBBEE7278E03950052D6DB /* Frameworks */,
 				78BBBEE8278E03950052D6DB /* Resources */,
-				FD7FFEA8793A1DF5F0674089 /* [CP] Embed Pods Frameworks */,
 				78DBAC2D279372EB00444FFF /* ShellScript */,
+				921A558A64EBEDE2B35D3BBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,11 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DBAC462793813700444FFF /* Build configuration list for PBXNativeTarget "ZipCodeFinderTests" */;
 			buildPhases = (
-				59D8AE09BBF3F50390CCF952 /* [CP] Check Pods Manifest.lock */,
+				4CF4B184A8BE7769D00D6207 /* [CP] Check Pods Manifest.lock */,
 				78DBAC392793813600444FFF /* Sources */,
 				78DBAC3A2793813600444FFF /* Frameworks */,
 				78DBAC3B2793813600444FFF /* Resources */,
-				9B43B847753A54E64714CEEB /* [CP] Embed Pods Frameworks */,
+				BB03CB46A18AFE2403F09CAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +309,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59D8AE09BBF3F50390CCF952 /* [CP] Check Pods Manifest.lock */ = {
+		08A69F566921649FF8D4495F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZipCodeFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CF4B184A8BE7769D00D6207 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,46 +370,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		9B43B847753A54E64714CEEB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4A26DF109624315604EB2A0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZipCodeFinder-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD7FFEA8793A1DF5F0674089 /* [CP] Embed Pods Frameworks */ = {
+		921A558A64EBEDE2B35D3BBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,6 +385,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinder/Pods-ZipCodeFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB03CB46A18AFE2403F09CAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZipCodeFinderTests/Pods-ZipCodeFinderTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -584,7 +584,7 @@
 		};
 		78BBBEFF278E03A30052D6DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CB7AABCCF2B9ABCFDB4EFE9 /* Pods-ZipCodeFinder.debug.xcconfig */;
+			baseConfigurationReference = 181A39EAB5E878FD197019AF /* Pods-ZipCodeFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -604,7 +604,7 @@
 		};
 		78BBBF00278E03A30052D6DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2803371310253ED93FAF4F6 /* Pods-ZipCodeFinder.release.xcconfig */;
+			baseConfigurationReference = 4C7DDE61E417BB0A39CBD610 /* Pods-ZipCodeFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -624,7 +624,7 @@
 		};
 		78DBAC442793813700444FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98003C6D9A79B9015A7610AF /* Pods-ZipCodeFinderTests.debug.xcconfig */;
+			baseConfigurationReference = CBB451C00F2FAF3861DECA2F /* Pods-ZipCodeFinderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -645,7 +645,7 @@
 		};
 		78DBAC452793813700444FFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 535B8DAB3E809490C2420B7D /* Pods-ZipCodeFinderTests.release.xcconfig */;
+			baseConfigurationReference = CC2968AF2AD2BDA076B9D8C6 /* Pods-ZipCodeFinderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
